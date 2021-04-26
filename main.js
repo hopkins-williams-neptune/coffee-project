@@ -1,10 +1,12 @@
 "use strict"
 
 function renderCoffee(coffee) {
-    var html = '<div class="tr coffee">';
+    var html = '<div class="card tr coffee">';
+    html += '<div class="card-body coffeeCard">';
     // html += '<div class="td">' + coffee.id + '</div>';
-    html += '<div class="td coffeeName">' + coffee.name + '</div>';
-    html += '<div class="td coffeeRoast">' + coffee.roast + '</div>';
+    html += '<div class="td coffeeName ">' + coffee.name + '</div>';
+    html += '<div class="td coffeeRoast text-muttext-muteded">' + coffee.roast + '</div>';
+    html += '</div>';
     html += '</div>';
 
     return html;
@@ -75,6 +77,12 @@ var coffees = [
     {id: 13, name: 'Italian', roast: 'dark'},
     {id: 14, name: 'French', roast: 'dark'},
 ];
+//     var name = document.querySelector("#roast-selection-new")
+//
+// function addCoffee(id,name,roast){
+//   //localstorage
+//
+// }
 
 var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');

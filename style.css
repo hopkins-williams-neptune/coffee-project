@@ -1,3 +1,9 @@
+.tbody {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+}
 .table {
     border-collapse: collapse;
     margin: 15px 0;
@@ -11,6 +17,12 @@
 .coffee {
   /*border-bottom: lime 10px solid; */
   display: flex;
+  background-color: lightgreen;
+  width: 18rem;
+}
+.coffeeCard {
+  display: flex;
+
 }
 
 .coffeeName {
@@ -25,5 +37,22 @@
 font-weight: normal;
     font-size:12px;
     color:red;
+}
+
+.tbody {
+  /*background-color: cornflowerblue;*/
+  padding:3em;
+}
+
+.coffeeForm{
+  background-color: firebrick;
+}
+
+#findCoffee {
+
+}
+
+#newCoffee {
+
 }
 
