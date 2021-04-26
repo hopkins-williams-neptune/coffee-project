@@ -74,15 +74,18 @@ var coffees = [
 
 var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
+var submitButtonText = document.querySelector('#submitText');
 // var typeButton = document.querySelector('#submitType');
 var roastSelection = document.querySelector('#roast-selection');
 var nameSelection = document.querySelector("#submitType")
 
 tbody.innerHTML = renderCoffees(coffees);
 
-submitButton.addEventListener('click', updateCoffeesText);
+submitButton.addEventListener('click', updateCoffees);
 
-//Text content, with changing the event listener keyup
+submitButtonText.addEventListener('click', updateCoffeesText);
+
+//Text content, with changing the event listerner
 
 // typeButton.addEventListener('keydown', updateCoffees);
 
