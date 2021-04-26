@@ -35,21 +35,21 @@ function updateCoffees(e) {
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
 
-// function updateCoffeesText(e) {
-//   e.preventDefault(); // don't submit the form, we just want to update the data
-//   // var selectedRoast = roastSelection.value;
-//   var filteredCoffees = [];
-//   var textSearch = nameSelection.value;
-//   console.log(textSearch)
-//
-//   coffees.forEach(function(coffee) {
-//     if (coffee.roast === textSearch) {
-//       filteredCoffees.push(coffee);
-//       // }
-//     }
-//   });
-//   tbody.innerHTML = renderCoffees(filteredCoffees);
-// }
+function updateCoffeesText(e) {
+  e.preventDefault(); // don't submit the form, we just want to update the data
+  // var selectedRoast = roastSelection.value;
+  var filteredCoffees = [];
+  var textSearch = nameSelection.value.toLowerCase();
+  console.log(textSearch);
+
+  coffees.forEach(function(coffee) {
+    if (coffee.name.toLowerCase() === textSearch) {
+      filteredCoffees.push(coffee);
+      // }
+    }
+  });
+  tbody.innerHTML = renderCoffees(filteredCoffees);
+}
 
 
 
@@ -80,10 +80,9 @@ var nameSelection = document.querySelector("#submitType")
 
 tbody.innerHTML = renderCoffees(coffees);
 
-submitButton.addEventListener('click', updateCoffees);
+submitButton.addEventListener('click', updateCoffeesText);
 
-
-
+//Text content, with changing the event listener keyup
 
 // typeButton.addEventListener('keydown', updateCoffees);
 
