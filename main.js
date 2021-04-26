@@ -57,8 +57,14 @@ function updateCoffeesText(e) {
   tbody.innerHTML = renderCoffees(filteredCoffees.sort((a,b) => (a.name > b.name) ? -1 : 1));
 }
 
+function getRandomQuote(){
+  var quotesArray = ["bada bing","You got bamboozled","Hi there","What ever"]
+  return quotesArray[Math.floor(Math.random() * quotesArray.length - 1) + 1];
+}
 
+var randomQuote = document.getElementById("quote")
 
+randomQuote.innerHTML = getRandomQuote()
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 var coffees = [

@@ -1,9 +1,15 @@
+body {
+  background-color: #dfdfd0;
+}
 .tbody {
+  /*background-color: cornflowerblue;*/
+  padding:3em;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 
 }
+
 .table {
     border-collapse: collapse;
     margin: 15px 0;
@@ -39,10 +45,7 @@ font-weight: normal;
     color:red;
 }
 
-.tbody {
-  /*background-color: cornflowerblue;*/
-  padding:3em;
-}
+
 
 .coffeeForm{
   background-color: firebrick;
@@ -63,11 +66,30 @@ font-weight: normal;
     background-size: 100%;
     background-repeat: no-repeat;
     object-fit: cover;
-    height: 30em;
+    height: 28em;
     margin-top: -8em;
+    border-bottom: black solid 5px;
+    display: flex;
 
+    /*border-image-source: linear-gradient(to left, #743ad5, #d53a9d);*/
+
+    /*border-image: linear-gradient(to bottom, red, rgba(0, 0, 0, 0)) 1 100%;*/
 }
 
+.jumboText {
+  margin-top: 5em;
+  margin-left: 0;
+  margin-right: 0;
+  width: 100%;
+  display: flex;
+  align-content: space-between;
+}
+
+
+.jumboHead {
+  background-image: linear-gradient(200deg, blue, red, yellow);
+  color: white;
+}
 /*.movingClouds {*/
 /*    height: 33%;*/
 /*    position: absolute;*/
