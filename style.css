@@ -1,5 +1,5 @@
 body {
-  background-color: #dfdfd0;
+  background-color: #484842;
 }
 .tbody {
   /*background-color: cornflowerblue;*/
@@ -30,7 +30,9 @@ body {
   display: flex;
   background-color: #dfdfd0;
   width: 18rem;
-  border: none;
+  border:none;
+  /*border: black solid 1px;*/
+  /*border-radius: 5px;*/
   flex-basis: 50%;
 
 }
@@ -68,7 +70,7 @@ font-weight: normal;
 
 }
 #grad {
-    background-image: linear-gradient(#666666, #dfdfd0);
+    background-image: linear-gradient(#cfcfc1, #484842);
 }
 
 
@@ -113,3 +115,25 @@ font-weight: normal;
 /*    object-fit: cover;*/
 /*    z-index: -10;*/
 /*}*/
+.cardImg {
+  height: 153px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  /*object-fit: cover;*/
+}
+#cardImgSearch{
+  background-image: url("img/coffee-cups.jpeg");
+}
+#cardImgNew {
+  background-image: url("img/coffee-on-shelf.jpeg");
+}
+#cardImgList {
+  background-image: url("img/beans.jpeg");
+}
+#cardImgSize {
+  /*background-position: 70% center;*/
+  background-image: url("img/cup-size.jpeg");
+}
+.card {
+  background-color: #dfdfd0;
+}
