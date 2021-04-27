@@ -52,29 +52,29 @@
           <div class="card">
             <img src="..." class="card-img-top" alt="...">
             <div class="card-body">
-              <h5 class="card-title">search coffee</h5>
+              <h4 class="card-title">Coffee Search</h4>
               <p class="card-text">
 
-              <form style="margin-bottom:100px;" method="POST" action="https://request-inspector.glitch.me/" class="coffeeForm" id="findCoffee">
+<!--              <form style="margin-bottom:100px;" method="POST" action="https://request-inspector.glitch.me/" class="coffeeForm " id="findCoffee">-->
                 <label for="roast-selection"></label>
-                <select id="roast-selection" onchange="updateCoffeesText()">
-                  <option value="any">Any</option>
-                  <option value="light">Light</option>
-                  <option value="medium">Medium</option>
-                  <option value="dark">Dark</option>
-                </select>
+<!--                <select id="roast-selection" onchange="updateCoffeesText()">-->
+<!--                  <option value="any">Any</option>-->
+<!--                  <option value="light">Light</option>-->
+<!--                  <option value="medium">Medium</option>-->
+<!--                  <option value="dark">Dark</option>-->
+<!--                </select>-->
                 <!--<input id="submit" type="submit" />-->
-                <br/>
-                <input type="text" id="submitType" onkeyup="updateCoffeesText()" placeholder="Search for names.." title="Type in a name">
-                <br/>
-                <input id="submitText" type="submit" />
+<!--                <br/>-->
+<!--                <input type="text" id="submitType" onkeyup="updateCoffeesText()" placeholder="Search for names.." title="Type in a name">-->
+<!--                <br/>-->
+<!--                <input id="submitText" type="submit" />-->
 
-              </form>
+<!--              </form>-->
 
-              <form class="was-validated">
+              <form style="margin-bottom:100px;" method="POST" action="https://request-inspector.glitch.me/" class="coffeeForm " id="findCoffee">
                 <div class="mb-3">
-                  <label for="validationTextarea">Textarea</label>
-                  <textarea class="form-control is-invalid" id="validationTextarea" placeholder="Required example textarea" required></textarea>
+                  <label for="submitType">Search by name.</label>
+                  <input class="form-control" id="submitType" onkeyup="updateCoffeesText()" placeholder="Search for names.." title="Type in a name" value="">
                   <div class="invalid-feedback">
                     Please enter a message in the textarea.
                   </div>
@@ -83,17 +83,14 @@
                 <div class="mb-3">
                   <div class="input-group is-invalid">
                     <div class="input-group-prepend">
-                      <label class="input-group-text" for="validatedInputGroupSelect">Options</label>
+                      <label class="input-group-text" for="roast-selection" >Roast</label>
                     </div>
-                    <select class="custom-select" id="validatedInputGroupSelect" required>
-                      <option value="">Choose...</option>
-                      <option value="1">One</option>
-                      <option value="2">Two</option>
-                      <option value="3">Three</option>
+                    <select class="custom-select " id="roast-selection" onchange="updateCoffeesText()">
+                      <option value="any">Any</option>
+                      <option value="light">Light</option>
+                      <option value="medium">Medium</option>
+                      <option value="dark">Dark</option>
                     </select>
-                  </div>
-                  <div class="invalid-feedback">
-                    Example invalid input group feedback
                   </div>
                 </div>
 
@@ -162,6 +159,7 @@
     <script src="main.js"></script>
 
     <script>
+
         window.onload=fillCoffeeArray;
     </script>
 </body>
