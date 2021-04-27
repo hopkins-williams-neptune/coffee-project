@@ -11,6 +11,7 @@ body {
 }
 
 .table {
+    display: flex;
     border-collapse: collapse;
     margin: 15px 0;
 }
@@ -20,17 +21,23 @@ body {
     padding: 5px 10px;
 
 }
+#coffees {
+  display: flex;
+  padding: 0;
+}
 .coffee {
   /*border-bottom: lime 10px solid; */
   display: flex;
   background-color: #dfdfd0;
   width: 18rem;
-    border: none;
+  border: none;
+  flex-basis: 50%;
 
 }
 .coffeeCard {
   display: flex;
-    padding: 0;
+  padding: 0;
+
 }
 
 .coffeeName {

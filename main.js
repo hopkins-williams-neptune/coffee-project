@@ -192,3 +192,4 @@ submitButtonText.addEventListener('click', updateCoffeesText);
 //     }
 //   }
 // }
+window.onload = fillCoffeeArray("");
