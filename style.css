@@ -133,7 +133,12 @@ font-weight: normal;
 #cardImgSize {
   /*background-position: 70% center;*/
   background-image: url("img/cup-size.jpeg");
+    height: 250px;
 }
 .card {
   background-color: #dfdfd0;
+}
+
+.sizing {
+    ;
 }
