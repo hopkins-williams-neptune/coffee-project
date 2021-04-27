@@ -58,7 +58,9 @@ font-weight: normal;
 #newCoffee {
 
 }
-
+#grad {
+    background-image: linear-gradient(#666666, #dfdfd0);
+}
 
 
 .jumbotron {
