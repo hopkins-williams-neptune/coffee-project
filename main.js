@@ -75,6 +75,7 @@ function saveCoffeeArray()
 
 function addToCoffeeArray()
 {
+  //e.preventDefault(); // don't submit the form, we just want to update the data
     //add new coffee to coffee array and call saveCoffeeArray
     //
     var newCoffeeName = addCoffee.value;
@@ -179,7 +180,7 @@ var roastSelection = document.querySelector('#roast-selection');
 var nameSelection = document.querySelector("#submitType")
 
 tbody.innerHTML = renderCoffees(coffees);
-
+// var submitCoffee = document.querySelector("#submitCoffee")
 submitCoffee.addEventListener('click', addToCoffeeArray);
 
 submitButtonText.addEventListener('click', updateCoffeesText);
