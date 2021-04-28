@@ -62,7 +62,7 @@ body {
 #cardImgSize {
   /*background-position: 70% center;*/
   background-image: url("img/cup-size.jpeg");
-  height: 250px;
+  height:250px;
 }
 
 .table {
