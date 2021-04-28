@@ -24,6 +24,7 @@ body {
   width: 100%;
   display: flex;
   align-content: space-between;
+  font-family: 'Arapey', serif;
 }
 
 #quote {
@@ -143,8 +144,6 @@ font-weight: normal;
 /*    z-index: -10;*/
 /*}*/
 
-
-
-.sizing {
-    ;
+.footer{
+  padding-right: 1em;
 }
