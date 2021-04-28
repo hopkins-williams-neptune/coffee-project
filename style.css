@@ -148,3 +148,18 @@ font-weight: normal;
 .footer{
   padding-right: 1em;
 }
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-instagram {
+  background-image: linear-gradient(200deg, blue, red, yellow);
+  color: white;
+}

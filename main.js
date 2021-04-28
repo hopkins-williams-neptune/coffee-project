@@ -8,29 +8,10 @@
 
 //make a blank array to hold our list of coffee objects
  var coffees = [];
-//   {id: 1, name: 'Light City', roast: 'light'},
-//   {id: 2, name: 'Half City', roast: 'light'},
-//   {id: 3, name: 'Cinnamon', roast: 'light'},
-//   {id: 4, name: 'City', roast: 'medium'},
-//   {id: 5, name: 'American', roast: 'medium'},
-//   {id: 6, name: 'Breakfast', roast: 'medium'},
-//   {id: 7, name: 'High', roast: 'dark'},
-//   {id: 8, name: 'Continental', roast: 'dark'},
-//   {id: 9, name: 'New Orleans', roast: 'dark'},
-//   {id: 10, name: 'European', roast: 'dark'},
-//   {id: 11, name: 'Espresso', roast: 'dark'},
-//   {id: 12, name: 'Viennese', roast: 'dark'},
-//   {id: 13, name: 'Italian', roast: 'dark'},
-//   {id: 14, name: 'French', roast: 'dark'},
-// ];
-
-
-
-
 
 function fillCoffeeArray()
 {
-    //see if there is a coffeearray stored in local storage
+    //see if there is a coffee array stored in local storage
     if (localStorage.getItem("coffeeArray") === null) {
         //alert('Filling manually');
         //if there is NOT a coffeeArray saved in localStorage, fill the array with the default data
@@ -172,13 +153,6 @@ var randomQuote = document.getElementById("quote")
 randomQuote.innerHTML = getRandomQuote()
 
 
-//     var name = document.querySelector("#roast-selection-new")
-//
-// function addCoffee(id,name,roast){
-//   //localstorage
-//
-// }
-
 var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var submitButtonText = document.querySelector('#submitText');
@@ -190,30 +164,6 @@ tbody.innerHTML = renderCoffees(coffees);
 // var submitCoffee = document.querySelector("#submitCoffee")
 submitCoffee.addEventListener('click', addToCoffeeArray);
 
-//submitButtonText.addEventListener('click', updateCoffeesText);
 
 
-//Text content, with changing the event listerner
-
-// typeButton.addEventListener('keydown', updateCoffees);
-
-//
-// function myFunction() {
-//   // Declare variables
-//   var input, filter, roast, name, txtValue;
-//   input = document.querySelector("#submitType");
-//   filter = input.value.toUpperCase();
-//   // roast = document.querySelector("#roast-selection");
-//   name =
-//   // Loop through all list items, and hide those who don’t match the search query
-//   for (i = 0; i < li.length; i++) {
-//     a = li[i].getElementsByTagName(“a”)[0];
-//     txtValue = a.textContent || a.innerText;
-//     if (txtValue.toUpperCase().indexOf(filter) > -1) {
-//       li[i].style.display = “”;
-//     } else {
-//       li[i].style.display = “none”;
-//     }
-//   }
-// }
 
