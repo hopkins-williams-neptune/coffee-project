@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap');
+
 body {
   background-color: #484842;
 }
@@ -38,6 +40,7 @@ body {
 .card {
   background-color: #dfdfd0;
   border: none;
+  font-family: 'Noto Sans TC', sans-serif;
 }
 
 .cardImg {
@@ -56,7 +59,7 @@ body {
 }
 
 #cardImgList {
-  background-image: url("img/beans1.jpeg");
+  background-image: url("img/beans.jpeg");
 }
 
 #cardImgSize {
