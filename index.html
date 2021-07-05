@@ -1,204 +1,205 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Heavanly Coffee</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+  <meta charset="UTF-8">
+  <title>Heavanly Coffee</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
 
   <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/54ed633ccb.js" crossorigin="anonymous"></script>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Arapey:ital@1&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/54ed633ccb.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Arapey:ital@1&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <div class="jumbotron">
-      <div class=" jumboText">
-        <h1 class="display-4" style="font-weight: bold">Heavenly <br> Coffee</h1>
-        <p class="lead ml-auto" id="quote"></p>
-      </div>
-    </div>
+<div class="jumbotron">
+  <div class=" jumboText">
+    <h1 class="display-4" style="font-weight: bold">Heavenly <br> Coffee</h1>
+    <p class="lead ml-auto" id="quote"></p>
+  </div>
+</div>
 
-    <div id="grad" style="height:20px;width:100%;margin-top:-40px;"></div>
+<div id="grad" style="height:20px;width:100%;margin-top:-40px;"></div>
 <!--    <div class="d-flex">-->
 
 
-      <div class="row row-cols-1 row-cols-md-2 mx-5">
-        <div class="col mb-4">
-          <div class="card">
-<!--            <img src="img/beans.jpeg" class="card-img-top" alt="...">-->
-            <div class="cardImg " id="cardImgList"></div>
-            <div class="card-body">
-              <h4 class="card-title" style="text-align: center">Flavor and Roast</h4>
-              <p class="card-text">
+<div class="row row-cols-1 row-cols-md-2 mx-5">
+  <div class="col mb-4">
+    <div class="card">
+      <!--            <img src="img/beans.jpeg" class="card-img-top" alt="...">-->
+      <div class="cardImg " id="cardImgList"></div>
+      <div class="card-body">
+        <h4 class="card-title" style="text-align: center">Flavor and Roast</h4>
+        <p class="card-text">
 
-              <div class="table">
-
-                <div class="tbody" id="coffees"></div>
-
-                <!--      <div class="card" style="width: 18rem;">-->
-                <!--        <div class="card-body">-->
-                <!--          <div class="card-title">Card title</div>-->
-                <!--          <div class="card-subtitle mb-2 text-muted">Card subtitle</div>-->
-                <!--        </div>-->
-                <!--      </div>-->
-
-              </div>
-
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col mb-4">
-          <div class="card">
-<!--            <img src="img/coffee-cups.jpeg" class="card-img-top" alt="...">-->
-            <div class="cardImg " id="cardImgSearch"></div>
-              <div class="card-body">
-              <h4 class="card-title" style="text-align: center">Search for your favorite coffee</h4>
-              <p class="card-text">
-
-<!--              <form style="margin-bottom:100px;" method="POST" action="https://request-inspector.glitch.me/" class="coffeeForm " id="findCoffee">-->
-                <label for="roast-selection"></label>
-<!--                <select id="roast-selection" onchange="updateCoffeesText()">-->
-<!--                  <option value="any">Any</option>-->
-<!--                  <option value="light">Light</option>-->
-<!--                  <option value="medium">Medium</option>-->
-<!--                  <option value="dark">Dark</option>-->
-<!--                </select>-->
-                <!--<input id="submit" type="submit" />-->
-<!--                <br/>-->
-<!--                <input type="text" id="submitType" onkeyup="updateCoffeesText()" placeholder="Search for names.." title="Type in a name">-->
-<!--                <br/>-->
-<!--                <input id="submitText" type="submit" />-->
-
-<!--              </form>-->
-
-              <form style="margin-bottom:130px;"  class="coffeeForm " id="findCoffee">
-                <div class="mb-3">
-                  <label for="submitType">Choose your flavor</label>
-                  <input class="form-control" id="submitType" onkeyup="updateCoffeesText()" placeholder="Coffee name" title="Type in a name" value="">
-
-                </div>
-
-                <div class="mb-3">
-                  <div class="input-group">
-                    <div class="input-group-prepend">
-                      <label class="input-group-text" for="roast-selection" >Roast</label>
-                    </div>
-                    <select class="custom-select " id="roast-selection" onchange="updateCoffeesText()">
-                      <option value="any">Any</option>
-                      <option value="light">Light</option>
-                      <option value="medium">Medium</option>
-                      <option value="dark">Dark</option>
-                    </select>
-                  </div>
-                </div>
-
-              </form>
-
-              </p>
-            </div>
-          </div>
+        <div class="table">
+          <div class="tbody" id="coffees"></div>
         </div>
 
-        <div class="col mb-4">
-          <div class="card" style="height:400px;white-space: nowrap;min-width:410px;">
-<!--            <img src="img/cup-size.jpeg" class="card-img-top" alt="...">-->
-            <!--<div class="cardImg" id="cardImgSize"></div>-->
-<div style="display:table-cell;text-align:center;">
-              <img src="img/cup-size.jpeg" style="max-width:400px;"/>
-          </div>
-                  <div class="card-body">
-              <h4 class="card-title" style="text-align: center">Choose a size</h4>
-
-                <div style="display:block; justify-content: space-between;width:400px;margin:auto;">
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" style="margin-left: 10px">
-                    <label class="form-check-label" for="inlineRadio1">$3.25</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2" style="margin-left: 15px">
-                    <label class="form-check-label" for="inlineRadio2">$3.79</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3" style="margin-left: 20px">
-                    <label class="form-check-label" for="inlineRadio3">$3.99</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option4" style="margin-left: 25px">
-                    <label class="form-check-label" for="inlineRadio4">$4.50</label>
-                </div>
-            </div>
-
-
-
-
-
-            </div>
-          </div>
-        </div>
-
-        <div class="col mb-4" >
-          <div class="card" style="height:400px;">
-<!--            <img src="img/coffee-on-shelf.jpeg" class="card-img-top" alt="...">-->
-            <div class="cardImg " id="cardImgNew"></div>
-            <div class="card-body">
-              <h4 class="card-title">New coffee here</h4>
-              <p class="card-text">
-
-              <form class="coffeeForm" id="newCoffee">
-                <div class="mb-3">
-                  <label for="submitType">Press add coffee to list when done.</label>
-
-                  <input type="text" class="form-control" id="addCoffee" onkeyup="" placeholder="Coffee Name" title="Add new Coffee">
-
-                </div>
-
-
-                <div class="mb-3">
-                  <div class="input-group">
-                    <div class="input-group-prepend">
-                      <label class="input-group-text" for="roastSelectionNew" >Roast</label>
-                    </div>
-                    <select class="custom-select " id="roastSelectionNew"  onchange="">
-                      <option value="light">Light</option>
-                      <option value="medium">Medium</option>
-                      <option value="dark">Dark</option>
-                    </select>
-                  </div>
-                </div>
-
-              <button id="submitCoffee" class="btn btn-secondary" type="submit">Add Coffee to List</button>
-
-              </form>
-
-<!--                <button id="submitCoffee" type="submit" >New Coffee</button>-->
-
-
-              </p>
-            </div>
-          </div>
-        </div>
+        </p>
       </div>
+    </div>
+  </div>
+  <div class="col mb-4">
+    <div class="card">
+      <!--            <img src="img/coffee-cups.jpeg" class="card-img-top" alt="...">-->
+      <div class="cardImg " id="cardImgSearch"></div>
+      <div class="card-body">
+        <h4 class="card-title" style="text-align: center">Search for your favorite coffee</h4>
+        <p class="card-text">
 
-    <footer>
-        <p style="text-align: center">(c) 2021 All rights reserved</p>
-        <div id="social-media-links" style="text-align: center">
-            <a href="https://twitter.com"><i class="fab fa-twitter"></i></a>
-            <a href="https://facebook.com"><i class="fab fa-facebook"></i></a>
-            <a href="https://instagram.com"><i class="fab fa-instagram"></i></a>
+          <!--              <form style="margin-bottom:100px;" method="POST" action="https://request-inspector.glitch.me/" class="coffeeForm " id="findCoffee">-->
+          <label for="roast-selection"></label>
+          <!--                <select id="roast-selection" onchange="updateCoffeesText()">-->
+          <!--                  <option value="any">Any</option>-->
+          <!--                  <option value="light">Light</option>-->
+          <!--                  <option value="medium">Medium</option>-->
+          <!--                  <option value="dark">Dark</option>-->
+          <!--                </select>-->
+          <!--<input id="submit" type="submit" />-->
+          <!--                <br/>-->
+          <!--                <input type="text" id="submitType" onkeyup="updateCoffeesText()" placeholder="Search for names.." title="Type in a name">-->
+          <!--                <br/>-->
+          <!--                <input id="submitText" type="submit" />-->
+
+          <!--              </form>-->
+
+        <form style="margin-bottom:130px;" class="coffeeForm " id="findCoffee">
+          <div class="mb-3">
+            <label for="submitType">Choose your flavor</label>
+            <input class="form-control" id="submitType" onkeyup="updateCoffeesText()" placeholder="Coffee name"
+                   title="Type in a name" value="">
+
+          </div>
+
+          <div class="mb-3">
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <label class="input-group-text" for="roast-selection">Roast</label>
+              </div>
+              <select class="custom-select " id="roast-selection" onchange="updateCoffeesText()">
+                <option value="any">Any</option>
+                <option value="light">Light</option>
+                <option value="medium">Medium</option>
+                <option value="dark">Dark</option>
+              </select>
+            </div>
+          </div>
+
+        </form>
+
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="col mb-4">
+    <div class="card" style="height:400px;">
+      <!--            <img src="img/coffee-on-shelf.jpeg" class="card-img-top" alt="...">-->
+      <div class="cardImg " id="cardImgNew"></div>
+      <div class="card-body">
+        <h4 class="card-title">New coffee here</h4>
+        <p class="card-text">
+
+        <form class="coffeeForm" id="newCoffee">
+          <div class="mb-3">
+            <label for="submitType">Press add coffee to list when done.</label>
+
+            <input type="text" class="form-control" id="addCoffee" onkeyup="" placeholder="Coffee Name"
+                   title="Add new Coffee">
+
+          </div>
+
+
+          <div class="mb-3">
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <label class="input-group-text" for="roastSelectionNew">Roast</label>
+              </div>
+              <select class="custom-select " id="roastSelectionNew" onchange="">
+                <option value="light">Light</option>
+                <option value="medium">Medium</option>
+                <option value="dark">Dark</option>
+              </select>
+            </div>
+          </div>
+
+          <button id="submitCoffee" class="btn btn-secondary" type="submit">Add Coffee to List</button>
+
+        </form>
+
+        <!--                <button id="submitCoffee" type="submit" >New Coffee</button>-->
+
+
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="col mb-4">
+    <div class="card" style="height:400px;white-space: nowrap;min-width:410px;">
+      <!--            <img src="img/cup-size.jpeg" class="card-img-top" alt="...">-->
+      <div class="cardImg" id="cardImgSize"></div>
+      <div style="display:table-cell;text-align:center;">
+        <!--              <img src="img/cup-size.jpeg" style="max-width:400px;"/>-->
+      </div>
+      <div class="card-body">
+        <h4 class="card-title" style="text-align: center">Choose a size</h4>
+
+        <div style="display:flex; justify-content: space-between;width:400px;margin:40px auto; flex-wrap: wrap;height: 30px;">
+          <div class="form-check form-check-inline" style="flex-basis: 30%;margin:20px 0;">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"
+                   style="margin-bottom: 0px">
+            <label class="form-check-label" for="inlineRadio1">Extra Small $3.25</label>
+          </div>
+          <div class="form-check form-check-inline" style="flex-basis: 30%;">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"
+                   style="margin-left: 0px">
+            <label class="form-check-label" for="inlineRadio2">Small $3.79</label>
+          </div>
+          <div class="form-check form-check-inline" style="flex-basis: 30%;">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"
+                   style="margin-left: 0px">
+            <label class="form-check-label" for="inlineRadio3">Medium $3.99</label>
+          </div>
+          <div class="form-check form-check-inline" style="flex-basis: 30%;">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option4"
+                   style="margin-left: 0px">
+            <label class="form-check-label" for="inlineRadio4">Large $4.50</label>
+          </div>
         </div>
-    </footer>
+
+
+      </div>
+    </div>
+  </div>
+
+
+</div>
+
+<footer>
+  <p style="text-align: center">(c) 2021 All rights reserved</p>
+  <div id="social-media-links" style="text-align: center">
+    <a href="https://twitter.com"><i class="fab fa-twitter"></i></a>
+    <a href="https://facebook.com"><i class="fab fa-facebook"></i></a>
+    <a href="https://instagram.com"><i class="fab fa-instagram"></i></a>
+  </div>
+</footer>
 <!--    </div>-->
 <!--    <img src="img/clouds.gif" class="movingClouds">-->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+        crossorigin="anonymous"></script>
 
-    <script src="main.js"></script>
+<script src="main.js"></script>
 
-    <script>
+<script>
 
-        window.onload=fillCoffeeArray;
-    </script>
+  window.onload = fillCoffeeArray;
+</script>
 </body>
 </html>
